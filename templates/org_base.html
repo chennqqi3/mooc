@@ -34,7 +34,7 @@
                         </a>
                         <div class="personal">
                         <dl class="user fr">
-                            <dd>{{ user.username }}<img class="down fr" src="/static/images/top_down.png"/></dd>
+                            <dd>{{ user.username }}<img class="down fr" src="{% static 'images/top_down.png' %}"/></dd>
                             <dt><img width="20" height="20" src="{{ MEDIA_URL }}{{ user.image }}"/></dt>
                         </dl>
                         <div class="userdetail">
@@ -51,13 +51,11 @@
                             </div>
                         </div>
                     {% endif %}
-                    </div>
+
 				</div>
 			</div>
 
-
-
-    <div class="middle companyheader">
+                <div class="middle companyheader">
         <div class="wp">
             <img class="fl" style="width: 112px;height: 103px" src="{{ MEDIA_URL }}{{ course_org.image }}"/>
             <div class="head fl">

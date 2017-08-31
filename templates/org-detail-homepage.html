@@ -42,7 +42,7 @@
                 <div class="right">
                     <div class="top">
                         <div class="fl">
-                            <a href=""><h1>{{ teacher.work_company }}: {{ teacher.work_position }}</h1></a>
+                            <a href="{% url 'org:teacher_detail' teacher.id %}"><h1>{{ teacher.work_company }}: {{ teacher.work_position }}</h1></a>
                             <span>工作年限：{{ teacher.work_years }}</span>
                         </div>
                     </div>

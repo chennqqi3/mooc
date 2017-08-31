@@ -51,23 +51,23 @@
         <div class="login-box clearfix">
             <div class="hd-login clearfix">
                 <a class="index-logo" href="{% url 'index' %}"></a>
+                <a class="index-logo index-font" href="{% url 'index' %}">回到首页</a>
                 <h1>用户登录</h1>
-                <a class="index-font" href="{% url 'index' %}">回到首页</a>
             </div>
-            <div class="fl slide">
-                <div class="imgslide">
-                    <ul class="imgs">
-                            <li><a href=""><img width="483" height="472" src="/static/images/mysql.jpg" /></a></li>
-                            <li><a href=""><img width="483" height="472" src="/static/images/mysql.jpg" /></a></li>
-                            <li><a href=""><img width="483" height="472" src="/static/images/mysql.jpg" /></a></li>
-                    </ul>
-                </div>
-                <div class="unslider-arrow prev"></div>
-                <div class="unslider-arrow next"></div>
-            </div>
+{#            <div class="fl slide">#}
+{#                <div class="imgslide">#}
+{#                    <ul class="imgs">#}
+{#                            <li><a href=""><img width="483" height="472" src="/static/images/mysql.jpg" /></a></li>#}
+{#                            <li><a href=""><img width="483" height="472" src="/static/images/mysql.jpg" /></a></li>#}
+{#                            <li><a href=""><img width="483" height="472" src="/static/images/mysql.jpg" /></a></li>#}
+{#                    </ul>#}
+{#                </div>#}
+{#                <div class="unslider-arrow prev"></div>#}
+{#                <div class="unslider-arrow next"></div>#}
+{#            </div>#}
             <div class="fl form-box">
                 <h2>帐号登录</h2>
-                <form action="/login/" method="post" autocomplete="off">
+                <form action="{% url 'login' %}" method="post" autocomplete="off">
                     {% csrf_token %}
                     <div class="form-group marb20 {% if login_form.errors.username %} errorput {% endif %}">
                         <label>用&nbsp;户&nbsp;名</label>

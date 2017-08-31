@@ -108,10 +108,12 @@ class CourseInfoView(LoginRequiredMixin, View):
 class CourseCommentView(LoginRequiredMixin, View):
     def get(self, request, course_id):
         course = Course.objects.get(id=int(course_id))
+        hot_courses = Course.objects.all().order_by('-click_nums')[:5]
         all_comments = UserComments.objects.all().order_by('-add_time')
         return render(request, 'course-comment.html', {
             'course': course,
             'all_comments': all_comments,
+            'hot_courses': hot_courses,
         })
 
 
