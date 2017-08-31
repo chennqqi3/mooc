@@ -25,9 +25,9 @@ sys.path.insert(0, os.path.join(BASE_DIR, 'apps'))
 SECRET_KEY = '&ag$ehiw&+lj6lt$x)l7@c&9g1txqsbv=x=)@qvc#gf*t)v-4r'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1',]
+ALLOWED_HOSTS = ['127.0.0.1', '116.196.87.103', 'localhost']
 
 AUTHENTICATION_BACKENDS = (
     'users.views.CustomBackend',
@@ -156,5 +156,5 @@ EMAIL_FROM = 'tiedanqi@sohu.com'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
