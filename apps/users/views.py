@@ -389,7 +389,7 @@ def page_not_found(request):
     全局404处理
     """
     response = render_to_response('404.html', {})
-    response.status_code = 404
+    response.status_code = 200
     return response
 
 
@@ -398,6 +398,6 @@ def page_error(request):
     全局500处理
     """
     response = render_to_response('500.html', {})
-    response.status_code = 500
+    response.status_code = 200
     return response
 
