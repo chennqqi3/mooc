@@ -43,6 +43,7 @@ urlpatterns = [
 
     # media处理
     url(r'^media/(?P<path>.*)/$', serve, {'document_root': MEDIA_ROOT}),
+
     # static处理
     # url(r'^static/(?P<path>.*)/$', serve, {'document_root': STATIC_ROOT}),
 
